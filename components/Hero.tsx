@@ -1,31 +1,32 @@
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-          안녕하세요, <span className="text-blue-600 dark:text-blue-400">홍길동</span>입니다
+    <section id="hero" className="px-6 md:px-12 lg:px-20 pt-12 pb-0">
+      <div className="max-w-screen-2xl mx-auto">
+        {/* 대형 디스플레이 타이틀 */}
+        <h1 className="text-[18vw] sm:text-[15vw] font-black uppercase leading-none tracking-tight mb-6">
+          HGD
         </h1>
-        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-4">
-          Frontend Developer
-        </p>
-        <p className="text-base sm:text-lg text-gray-500 dark:text-gray-500 mb-8">
-          사용자 경험을 중심으로 아름답고 기능적인 웹을 만듭니다.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8">
+          <p className="text-sm text-muted uppercase tracking-widest leading-relaxed max-w-xs">
+            사용자 경험을 중심으로<br />아름답고 기능적인 웹을 만듭니다
+          </p>
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            className="self-start sm:self-auto border border-foreground px-8 py-3 text-xs uppercase tracking-widest hover:bg-foreground hover:text-white transition-colors duration-200 rounded-none"
           >
-            프로젝트 보기
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
-          >
-            연락하기
+            Featured Works
           </a>
         </div>
       </div>
+
+      {/* 풀 블리드 히어로 이미지 영역 */}
+      <div className="-mx-6 md:-mx-12 lg:-mx-20">
+        <div className="w-full h-[55vh] bg-foreground/5 ring-4 ring-foreground flex items-center justify-center overflow-hidden">
+          <span className="text-xs uppercase tracking-widest text-muted">
+            Frontend Developer · Seoul · 2024
+          </span>
+        </div>
+      </div>
     </section>
-  );
+  )
 }
